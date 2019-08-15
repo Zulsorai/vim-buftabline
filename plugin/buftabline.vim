@@ -51,7 +51,7 @@ function! buftabline#render()
 	let show_num = g:buftabline_numbers == 1
 	let show_ord = g:buftabline_numbers == 2
 	let show_mod = g:buftabline_indicators
-	let lpad     = g:buftabline_separator_char
+	let lpad     = g:buftabline_separators ? g:buftabline_separator_char : ' '
 
 	let bufnums = buftabline#user_buffers()
 	let centerbuf = s:centerbuf " prevent tabline jumping around when non-user buffer current (e.g. help)
