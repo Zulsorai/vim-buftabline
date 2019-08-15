@@ -28,7 +28,7 @@ effect immediately unless you force an update: >
     :call buftabline#update(0)
 <
 
-*g:buftabline_show*          number (default 2)
+*g:buftabline_show*             number (default 2)
 
     The value of this option specifies when the line with buffer labels will
     be displayed:
@@ -38,7 +38,7 @@ effect immediately unless you force an update: >
     This is analogous to the 'showtabline' setting, only for the |buftabline|.
 
 
-*g:buftabline_numbers*       number (default 0)
+*g:buftabline_numbers*          number (default 0)
 
     The value of this option specifies how to number the buffer labels:
              0: no numbering
@@ -49,13 +49,13 @@ effect immediately unless you force an update: >
     from left to right.
 
 
-*g:buftabline_indicators*    boolean (default off)
+*g:buftabline_indicators*       boolean (default off)
 
     When on, the buffer's state is indicated in the buffer label. Currently
     the only state indicated is whether the buffer is 'modified'.
 
 
-*g:buftabline_separators*    boolean (default off)
+*g:buftabline_separators*       boolean (default off)
 
     When on, a vertical line is drawn inbetween tabs. (This is not strictly
     correct. The effect is actually achieved by replacing the space on the
@@ -63,7 +63,14 @@ effect immediately unless you force an update: >
     separator will be highlighted the same way as the tab to its left.)
 
 
-*g:buftabline_plug_max*      number (default 10)
+*g:buftabline_separator_char*   character (U+23B8)
+
+    The character used to display a separator between tabs.
+    Ensure using absolute character values. >
+        :let g:buftabline_seperator_char = '|'
+
+
+*g:buftabline_plug_max*         number (default 10)
 
     The number of |buftabline-mappings| that will be created by the plugin.
     You can request more of them or turn off the functionality entirely by
